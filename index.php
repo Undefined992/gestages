@@ -40,7 +40,7 @@ background-color: #ddd;
 </head>
 <body>
 <h1>Informations des utilisateurs</h1>
-<img src="Sylas.png" alt=" ">
+<img src="Sylas.png" alt="">
 <?php
 // Paramètres de connexion à la base de données
 $servername = "bdd-tp-mysql-jordan.mysql.database.azure.com";
@@ -62,7 +62,7 @@ if ($conn->connect_error) {
 die("La connexion a échoué: " . $conn->connect_error);
 }
 // Préparer et exécuter la requête
-$query = "SELECT * FROM personnes";
+$query = "SELECT * FROM salaries";
 if ($stmt = $conn->prepare($query)) {
  $stmt->execute();
  $result = $stmt->get_result();
@@ -76,6 +76,9 @@ echo "<tr>";
 echo "<td>" . htmlspecialchars($row['Nom']) . "</td>";
 echo "<td>" . htmlspecialchars($row['Prénom']) . "</td>";
 echo "<td>" . htmlspecialchars($row['Service']) . "</td>";
+echo "<td>" . htmlspecialchars($row['Fonction']) . "</td>";
+echo "<td>" . htmlspecialchars($row['Login']) . "</td>";
+echo "<td>" . htmlspecialchars($row['Mail']) . "</td>";
 echo "</tr>";
  }
 echo "</table>";
