@@ -40,7 +40,7 @@ background-color: #ddd;
 </head>
 <body>
 <h1>Informations des utilisateurs</h1>
-<img src="Sylas.jpg" alt="">
+<img src="Sylas.jpg" alt="TP-RICHARD">
 <?php
 // Paramètres de connexion à la base de données
 $servername = "bdd-tp-mysql-jordan.mysql.database.azure.com";
